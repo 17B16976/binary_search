@@ -5,12 +5,12 @@ int k;
 int A[100000];
 
 int p(int a) {
-    int b = -1 ;
+    int b = 0 ;
     int s = 0 ;
-    while ( b < n - 1) {
-        if (A[b+1] % a == 0) {s = s + (A[b+1]/a) ;
+    while ( b < n ) {
+        if (A[b] % a == 0) {s = s + (A[b]/a) ;
             b = b + 1 ; }
-        else {s = s + 1 + (A[b+1]/a) ;
+        else {s = s + 1 + (A[b]/a) ;
             b = b + 1 ; }
     }
     return  s <= k ;
